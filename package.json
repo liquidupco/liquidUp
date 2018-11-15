@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/liquidupco/liquidUp#readme",
   "dependencies": {
-    "strapi": "^1.6.4"
+    "bootstrap": "^4.1.3",
+    "strapi": "^1.6.4",
+    "uikit": "^3.0.0-rc.22"
   }
 }
