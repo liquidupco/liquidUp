@@ -10,6 +10,8 @@
 
 - git pull
 
+- npm install
+
 ## sauvegarder les modifications apportées au projet
 
 - git add .
@@ -18,7 +20,13 @@
 
 - git push
 
-## lancer l'application strapi
+## Installer Strapi
+
+n'importe ou sur la machine:
+
+- npm install 3.0.0 -g
+
+## lancer l'application strap
 
 Aller à l'emplacement de mongod.exe
 
