@@ -1,5 +1,7 @@
 # liquidup
 
+/!\ Utiliser une version de nodeJS 9.2.1 ou supérieur /!\
+
 ## récupérer le projet et les dépendances
 
 - git clone https://github.com/liquidupco/liquidUp.git
@@ -24,7 +26,7 @@
 
 n'importe ou sur la machine:
 
-- npm install 3.0.0 -g
+- npm install strapi@alpha -g
 
 ## lancer l'application strap
 
