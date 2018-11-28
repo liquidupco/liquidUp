@@ -5,6 +5,7 @@ var router = express.Router();
 
 httpserver = http.createServer(app);
 
+//app.use('/ar', require('./ar.js'));
 app.get('/', function (req, res) {
     res.sendfile(__dirname + '/index.html');
 });
