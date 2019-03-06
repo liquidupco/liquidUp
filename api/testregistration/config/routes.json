@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/testregistrations",
+      "handler": "Testregistration.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/testregistrations/count",
+      "handler": "Testregistration.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/testregistrations/:_id",
+      "handler": "Testregistration.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/testregistrations",
+      "handler": "Testregistration.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/testregistrations/:_id",
+      "handler": "Testregistration.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/testregistrations/:_id",
+      "handler": "Testregistration.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
