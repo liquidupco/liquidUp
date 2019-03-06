@@ -75,3 +75,7 @@ https://strapi.io/documentation/3.x.x/getting-started/quick-start.html#_3-create
 
 - Aller sur le site de NodeJS pour le réinstaller:
 https://nodejs.org/en/download/
+
+### Si ça ne marche toujours pas:
+
+ - reformatez l'ordinateur
