@@ -57,6 +57,7 @@ https://strapi.io/documentation/3.x.x/getting-started/quick-start.html#_3-create
 - Réessayer d'installer strapi
 - Vérifier la version de nodeJS
 - Redémarrer l'ordinateur 
+- Essayer la commande "> node server.js" à la racine du projet
 
 ### La commande git ne marche pas
 

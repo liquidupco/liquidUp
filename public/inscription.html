@@ -25,26 +25,28 @@
 
 					<div class="row">
 
-	 					<form>
+	 					<form  name="registration" action="javascript:register()">
 						  	<div class="form-group">
 							    <label for="exampleInputEmail1">Pseudo</label>
-							    <input type="email" class="form-control" id="log_mail" aria-describedby="emailHelp" placeholder="Pseudo">
+							    <input type="text" name="username" class="form-control" id="log_mail" aria-describedby="emailHelp" placeholder="Pseudo">
 							    <label for="exampleInputEmail1">Adresse E-mail</label>
-							    <input type="email" class="form-control" id="log_mail" aria-describedby="emailHelp" placeholder="Adresse E-mail...">
+							    <input type="email" name="email" class="form-control" id="log_mail" aria-describedby="emailHelp" placeholder="Adresse E-mail...">
 							</div>
 						    <div class="form-group">
 							    <label for="exampleInputPassword1">Mot de passe</label>
 							    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe...">
 							    <label for="exampleInputPassword1">Confirmer le mot de passe</label>
-							    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirmer le mot de passe...">
+							    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Confirmer le mot de passe...">
 							</div>
-						  <button type="submit" class="btn btn-secondary btn-sm" style="background-color: #191919">Submit</button>
+						  <button type="submit" class="btn btn-secondary btn-sm" style="background-color: #191919" >Submit</button>
 						</form>
 				    </div>
 				</div>
 			</div>
 		</div>
 
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="index.js"></script>
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
