@@ -37,7 +37,7 @@ Windows:
 
 Mac/Linux: RTFM
 
-Retourner dans le dossier du projet puis dans le sous dossier liquiup (dans un autre invite de commande, il faut laisser mongod.exe tourner)
+Retourner dans le dossier du projet puis dans le sous dossier liquidup (dans un autre invite de commande, il faut laisser mongod.exe tourner)
 - strapi start
 
 Ouvrez votre navigateur
