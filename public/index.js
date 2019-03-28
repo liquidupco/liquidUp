@@ -60,6 +60,7 @@ function getressources(ressourcesURL){
     .catch(error => {
       // Handle error.
       console.log('An error occurred:', error);
+      alert('Connectez vous');
     });
 }
 

@@ -35,7 +35,7 @@ Aller à l'emplacement de mongod.exe
 Windows:
 - mongod.exe
 
-Mac/Linux: démerdez vous
+Mac/Linux: RTFM
 
 Retourner dans le dossier du projet puis dans le sous dossier liquiup (dans un autre invite de commande, il faut laisser mongod.exe tourner)
 - strapi start
