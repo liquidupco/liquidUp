@@ -10,6 +10,8 @@ function register() {
       console.log('Well done!');
       console.log('User profile', response.data.user);
       console.log('User token', response.data.jwt);
+      setCookie("username", response.data.user, 1);
+      setCookie("token", response.data.jwt, 1);
       alert('Compte connecté, user token:' + response.data.jwt);
     })
     .catch(error => {
@@ -32,12 +34,33 @@ function login() {
       console.log('Well done!');
       console.log('User profile', response.data.user);
       console.log('User token', response.data.jwt);
+      setCookie("username", response.data.user, 1);
+      setCookie("token", response.data.jwt, 1);
       alert('Compte connecté, user token:' + response.data.jwt);
     })
     .catch(error => {
       // Handle error.
       console.log('An error occurred:', error);
       alert('Connexion de compte raté');
+    });
+}
+
+function getressources(ressourcesURL){
+  var token = getCookie("token");
+  axios
+    .get(ressourcesURL, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
+    .then(response => {
+      // Handle success.
+      console.log('Data: ', response.data);
+    })
+    .catch(error => {
+      // Handle error.
+      console.log('An error occurred:', error);
+      alert('Connectez vous');
     });
 }
 
