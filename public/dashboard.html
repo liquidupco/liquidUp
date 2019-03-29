@@ -8,19 +8,41 @@
   </head>
 
  <body lang="en" style="background-color: #292E33;">
-  <div class="w-75 mx-auto">
+    <div class="w-75 mx-auto">
+
+    	<!-- NAVBAR -->
+      <nav class="navbar navbar-expand-lg">					
+          <a class="navbar-brand text-light" href="/">
+            <img src="img/liquidUpBanniere.png" width="175"  class="d-inline-block align-top" alt="">
+          </a>	
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <!--
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="/listProjet.html">Project</a>
+                </li>
+                
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled text-light" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                  </li>
+                -->
+              </ul>
+            </div>
+            <a href="/dashboard.html" >
+              <img id="avatar" src="img/avatar/icon_animal_camelo.svg" style="display: none;width: 32px;height: 32px;">
+            </a>
+            <button id="connexion" type="button" class="btn btn-info" data-toggle="modal"  data-target="#exampleModal">
+                Se connecter
+            </button>
+      </nav>
+
     <div class="row">
 
       <!--  BLOCK CENTRAL DE LA PAGE -->
-      <div class="col" style="border-left: 1px solid; border-right: 1px solid;">
-        <nav class="navbar">
-          <form class="form-inline">
-            <img alt="32x32" class="mr-2 rounded" src="img/liquidup.png" data-holder-rendered="true" style="width: 32px; height: 32px;">
-          </form>
-          <a class="navbar-brand text-light">Mon Dashboard</a>
-          
-        </nav>
-
+      <div class="col">
         <div class="jumbotron shadow-lg p-3 mb-5 rounded" style="background-color: rgba(255, 255, 255, 0.1);">
             <p class="lead text-light" style="color: #9D9D9D;">Mes points</p>
         </div>
@@ -33,8 +55,9 @@
               <div class="d-flex justify-content-between align-items-center w-100">
                 <h6 class="pb-2 mb-0 text-light">Mes projets</h6>                
                 <div class="dropdown">
+                  <a class="text-light">de </a>
                   <a class="dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Période à chercher (Mois année)
+                   Janvier 2019
                   </a>
 
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -43,14 +66,24 @@
                     <a class="dropdown-item" href="#">Something else here</a>
                   </div>
                 </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Janvier 2019
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
               </div>
               
                 <div class="media text-muted pt-3">
-                  <img alt="32x32" class="mr-2 rounded" src="img/gg.svg" data-holder-rendered="true" style="width: 32px; height: 32px;">
+                  <img alt="32x32" class="mr-2 rounded" src="img/projet/andrew-neel-308138-unsplash.jpg" data-holder-rendered="true" style="width: 32px; height: 32px;">
                   <div class="media-body pb-3 mb-0 small lh-125">
                     <div class="d-flex justify-content-between align-items-center w-100">
-                        <a href="/detail.html"><h6 class="text-light">Projet 1</h6></a>
-                      <span class="fas fa-ellipsis-h"></span>
+                      <a href="/detail.html"><h6 class="text-light">Projet 1</h6></a>
                       <img alt="32x32" class="mr-2 rounded" src="img/svg/ellipsis-h-alt.svg" data-holder-rendered="true" style="width: 16px; height: 16px;">
                       <i class="fal fa-igloo"></i>
                     </div>
@@ -64,7 +97,7 @@
                 <hr>
 
                 <div class="media text-muted pt-3">
-                  <img alt="32x32" class="mr-2 rounded" src="img/gg.svg" data-holder-rendered="true" style="width: 32px; height: 32px;">
+                  <img alt="32x32" class="mr-2 rounded" src="img/projet/annie-spratt-608001-unsplash.jpg" data-holder-rendered="true" style="width: 32px; height: 32px;">
                   <div class="media-body pb-3 mb-0 small lh-125">
                     <div class="d-flex justify-content-between align-items-center w-100">
                         <a href="/detail.html"><h6 class="text-light">Projet 2</h6></a>
@@ -82,7 +115,7 @@
                 <hr>
 
                 <div class="media text-muted pt-3">
-                  <img alt="32x32" class="mr-2 rounded" src="img/gg.svg" data-holder-rendered="true" style="width: 32px; height: 32px;">
+                  <img alt="32x32" class="mr-2 rounded" src="img/projet/fabian-irsara-92113-unsplash.jpg" data-holder-rendered="true" style="width: 32px; height: 32px;">
                   <div class="media-body pb-3 mb-0 small lh-125">
                     <div class="d-flex justify-content-between align-items-center w-100">
                         <a href="/detail.html"><h6 class="text-light">Projet 3</h6></a>
@@ -107,7 +140,7 @@
       </div>
       <br>
 
-       
+       <!-- MON ACTIVITÉ-->
       <div class="col-2" style="background-color: rgba(255, 255, 255, 0.2);">
         <div class="container">
          <nav class="navbar">
@@ -119,13 +152,13 @@
             <h6 class="border-bottom border-gray pb-2 mb-0 text-light">Popular Projects</h6>
 
             <div class="media text-muted pt-3">
-              <img alt="32x32" class="mr-2 rounded" src="img/gg.svg" data-holder-rendered="true" style="width: 32px; height: 32px;">
+              <img alt="32x32" class="mr-2 rounded" src="img/projet/mimi-thian-737711-unsplash.jpg" data-holder-rendered="true" style="width: 32px; height: 32px;">
               <div class="media-body pb-3 mb-0 small lh-125">
                 <div class="d-flex justify-content-between align-items-center w-100">
-                  <strong class="text-light">Full Name</strong>
+                  <strong class="text-light">CookMaster</strong>
                   <a href="#">Follow</a>
                 </div>                
-                <span class="d-block text-gray-dark">@username</span>
+                <span class="d-block text-gray-dark">George</span>
               </div>
             </div>
 
@@ -141,3 +174,34 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
   </body>
 </html>
+
+<!-- MODAL -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form name="login" action="javascript:login()">
+						<div class="form-group">
+							<label for="exampleInputEmail1">Pseudo</label>
+							<input type="text" name="username" class="form-control" id="log_mail" aria-describedby="emailHelp" placeholder="Pseudo">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Mot de passe</label>
+							<input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe...">
+						</div>
+						<button type="submit" class="btn btn-info btn-sm">Se connecter</button>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<a class="btn btn-info" href="/inscription.html" role="button">S'inscrire</a>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+</div>
