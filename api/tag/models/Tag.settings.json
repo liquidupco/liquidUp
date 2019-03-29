@@ -1,0 +1,26 @@
+{
+  "connection": "default",
+  "collectionName": "Tags",
+  "info": {
+    "name": "tag",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "nom": {
+      "default": "",
+      "type": "string"
+    },
+    "actif": {
+      "default": false,
+      "type": "boolean"
+    },
+    "projet": {
+      "collection": "projet",
+      "via": "tags",
+      "dominant": true
+    }
+  }
+}

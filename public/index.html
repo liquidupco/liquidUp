@@ -8,7 +8,7 @@
     
    </head>
   		
-  	<body lang="en" style="background-color: #292E33;">
+  	<body ng-init="oninit()" ng-app="myApp" ng-controller="myCtrl" onload="verifConnexion()" lang="en" style="background-color: #292E33;">
   		<div class="w-75 mx-auto">
 
 				<!-- NAVBAR -->
@@ -32,12 +32,12 @@
 										-->
 									</ul>
 								</div>
-								<a href="/dashboard.html" >
-									<img id="avatar" src="img/avatar/icon_animal_camelo.svg" style="display: none;width: 32px;height: 32px;">
-								</a>
-								<button id="connexion" type="button" class="btn btn-info" data-toggle="modal"  data-target="#exampleModal">
-										Se connecter
-								</button>
+                <a href="/dashboard.html" >
+                  <img id="avatar" src="img/avatar/icon_animal_camelo.svg" style="display: none;width: 32px;height: 32px;">
+                </a>
+                <button id="connexion" type="button" class="btn btn-info" data-toggle="modal"  data-target="#exampleModal">
+                  Se connecter
+                </button>
 					</nav>
 					
 					<!-- JUMBOTRON -->
@@ -46,166 +46,27 @@
 					</div>
 
 					<!-- LISTES DES PROJETS -->
-					<div class="card-deck">
-					    <div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);">
-							<a href="/detail.html"><img class="card-img-top" src="img/projet/andrew-neel-308138-unsplash.jpg" alt="Card image cap" ></a>
-							<div class="card-body">
-							    <h5 class="card-title">Card title</h5>
-							    <h6 class="card-title">Card sub-title</h6>
-							    <p class="card-text text-justify">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <hr>
-							    <div class="text-right">
-											<a type="button" class="btn btn-info" href="/detail.html">Voir le projet</a>
-						  		</div>
-							</div>
+					<div class="card-deck" ng-repeat="projets in listeprojets track by $index">
+					    <div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);" ng-repeat="projet in projets track by $index" ng-hide="{{projet.titre == undefined}}">
+                <a href="/detail.html"><img class="card-img-top" src="{{projet.image}}" alt="Card image cap" ></a>
+                <div class="card-body">
+                    <h5 class="card-title" class="titreprojet">{{projet.titre}}</h5>
+                    <h6 class="card-title" class="soustitreprojet">{{projet.soustitre}}</h6>
+                    <p class="card-text text-justify" class="descriptionprojet">{{projet.description}}</p>
+                    <span class="badge badge-secondary" ng-repeat="tag in projet.tags track by $index">{{tag.nom}}</span>
+                    <hr>
+                    <div class="text-right">
+                        <a type="button" class="btn btn-info" href="/detail.html">Voir le projet</a>
+                    </div>
+                </div>
 						</div>
-						<div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);">
-								<a href="/detail.html"><img class="card-img-top" src="img/projet/bench-accounting-49027-unsplash.jpg" alt="Card image cap" ></a>
-							<div class="card-body">
-							    <h5 class="card-title">Card title</h5>
-							    <h6 class="card-title">Card sub-title</h6>
-							    <p class="card-text text-justify">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <hr>
-							    <div class="text-right">
-											<a type="button" class="btn btn-info" href="/detail.html">Voir le projet</a>
-						  		</div>
-							</div>
-						</div>
-						<div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);">
-								<a href="/detail.html"><img class="card-img-top" src="img/projet/brooke-cagle-195777-unsplash.jpg" alt="Card image cap" ></a>
-							<div class="card-body">
-							    <h5 class="card-title">Card title</h5>
-							    <h6 class="card-title">Card sub-title</h6>
-							    <p class="card-text text-justify">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <hr>
-							    <div class="text-right">
-											<a type="button" class="btn btn-info" href="/detail.html">Voir le projet</a>
-						  		</div>
-							</div>
-						</div>					
 					</div>
-					
-					<br>
-
-					<div class="card-deck" >
-					    <div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);">
-									<a href="/detail.html"><img class="card-img-top" src="img/projet/fabian-irsara-92113-unsplash.jpg" alt="Card image cap" ></a>
-							<div class="card-body">
-							    <h5 class="card-title">Card title</h5>
-							    <h6 class="card-title">Card sub-title</h6>
-							    <p class="card-text text-justify">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <hr>
-							    <div class="text-right">
-											<a type="button" class="btn btn-info" href="/detail.html">Voir le projet</a>
-						  		</div>
-							</div>
-						</div>
-						<div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);">
-								<a href="/detail.html"><img class="card-img-top" src="img/projet/tim-gouw-68319-unsplash.jpg" alt="Card image cap" ></a>
-							<div class="card-body">
-							    <h5 class="card-title">Card title</h5>
-							    <h6 class="card-title">Card sub-title</h6>
-							    <p class="card-text text-justify">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <hr>
-							    <div class="text-right">
-											<a type="button" class="btn btn-info" href="/detail.html">Voir le projet</a>
-						  		</div>
-							</div>
-						</div>
-						<div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);">
-								<a href="/detail.html"><img class="card-img-top" src="img/projet/mimi-thian-737711-unsplash.jpg" alt="Card image cap" ></a>
-							<div class="card-body">
-							    <h5 class="card-title">Card title</h5>
-							    <h6 class="card-title">Card sub-title</h6>
-							    <p class="card-text text-justify">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <hr>
-							    <div class="text-right">
-											<a type="button" class="btn btn-info" href="/detail.html">Voir le projet</a>
-						  		</div>
-							</div>
-						</div>			
-					</div>
-					
-					<br>
-
-					<div class="card-deck" >
-					    <div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);">
-									<a href="/detail.html"><img class="card-img-top" src="img/projet/simon-abrams-286276-unsplash.jpg" alt="Card image cap" ></a>
-							<div class="card-body">
-							    <h5 class="card-title">Card title</h5>
-							    <h6 class="card-title">Card sub-title</h6>
-							    <p class="card-text text-justify">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <hr>
-							    <div class="text-right">
-											<a type="button" class="btn btn-info" href="/detail.html">Voir le projet</a>
-						  		</div>
-							</div>
-						</div>
-						<div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);">
-								<a href="/detail.html"><img class="card-img-top" src="img/projet/trent-erwin-338084-unsplash.jpg" alt="Card image cap" ></a>
-							<div class="card-body">
-							    <h5 class="card-title">Card title</h5>
-							    <h6 class="card-title">Card sub-title</h6>
-							    <p class="card-text text-justify">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <hr>
-							    <div class="text-right">
-											<a type="button" class="btn btn-info" href="/detail.html">Voir le projet</a>
-						  		</div>
-							</div>
-						</div>
-						<div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);">
-							<a href="/detail.html"><img class="card-img-top" src="img/projet/thomas-lefebvre-3950-unsplash.jpg" alt="Card image cap" ></a>
-							<div class="card-body">
-							    <h5 class="card-title">Card title</h5>
-							    <h6 class="card-title">Card sub-title</h6>
-							    <p class="card-text text-justify">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <span class="badge badge-secondary">New</span>
-							    <hr>
-							    <div class="text-right">
-											<a type="button" class="btn btn-info" href="/detail.html">Voir le projet</a>
-						  		</div>
-							</div>
-						</div>			
-					</div>
-					
-					<br>
 
 				</div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="index.js"></script>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
