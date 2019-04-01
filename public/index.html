@@ -5,7 +5,8 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Page d'accueil - Liquid'Up</title>
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
 
@@ -50,55 +51,16 @@
 		</div>
 
 		<!-- LISTES DES PROJETS -->
-		<div class="card-deck">
-			<div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);">
-				<a href="/detail.html"><img class="card-img-top" src="img/projet/andrew-neel-308138-unsplash.jpg"
-						alt="Card image cap"></a>
+		<div class="card-deck" ng-repeat="projets in listeprojets track by $index">
+			<div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);"
+				ng-repeat="projet in projets track by $index" ng-hide="{{projet.titre == undefined}}">
+				<a href="/detail.html"><img class="card-img-top" src="{{projet.image}}" alt="Card image cap"></a>
 				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<h6 class="card-title">Card sub-title</h6>
-					<p class="card-text text-justify">This is a longer card with supporting text below as a natural
-						lead-in to additional content. This content is a little bit longer.</p>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<hr>
-					<div class="text-right">
-						<a type="button" class="btn btn-info" href="/detail.html">Voir le projet</a>
-					</div>
-				</div>
-			</div>
-			<div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);">
-				<a href="/detail.html"><img class="card-img-top" src="img/projet/bench-accounting-49027-unsplash.jpg"
-						alt="Card image cap"></a>
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<h6 class="card-title">Card sub-title</h6>
-					<p class="card-text text-justify">This is a longer card with supporting text below as a natural
-						lead-in to additional content. This content is a little bit longer.</p>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<hr>
-					<div class="text-right">
-						<a type="button" class="btn btn-info" href="/detail.html">Voir le projet</a>
-					</div>
-				</div>
-			</div>
-			<div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);">
-				<a href="/detail.html"><img class="card-img-top" src="img/projet/brooke-cagle-195777-unsplash.jpg"
-						alt="Card image cap"></a>
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<h6 class="card-title">Card sub-title</h6>
-					<p class="card-text text-justify">This is a longer card with supporting text below as a natural
-						lead-in to additional content. This content is a little bit longer.</p>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
+					<h5 class="card-title" class="titreprojet">{{projet.titre}}</h5>
+					<h6 class="card-title" class="soustitreprojet">{{projet.soustitre}}</h6>
+					<p class="card-text text-justify" class="descriptionprojet">{{projet.description}}</p>
+					<span class="badge badge-secondary"
+						ng-repeat="tag in projet.tags track by $index">{{tag.nom}}</span>
 					<hr>
 					<div class="text-right">
 						<a type="button" class="btn btn-info" href="/detail.html">Voir le projet</a>
@@ -108,135 +70,18 @@
 		</div>
 
 		<br>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="index.js"></script>
 
-		<div class="card-deck">
-			<div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);">
-				<a href="/detail.html"><img class="card-img-top" src="img/projet/fabian-irsara-92113-unsplash.jpg"
-						alt="Card image cap"></a>
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<h6 class="card-title">Card sub-title</h6>
-					<p class="card-text text-justify">This is a longer card with supporting text below as a natural
-						lead-in to additional content. This content is a little bit longer.</p>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<hr>
-					<div class="text-right">
-						<a type="button" class="btn btn-info" href="/detail.html">Voir le projet</a>
-					</div>
-				</div>
-			</div>
-			<div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);">
-				<a href="/detail.html"><img class="card-img-top" src="img/projet/tim-gouw-68319-unsplash.jpg"
-						alt="Card image cap"></a>
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<h6 class="card-title">Card sub-title</h6>
-					<p class="card-text text-justify">This is a longer card with supporting text below as a natural
-						lead-in to additional content. This content is a little bit longer.</p>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<hr>
-					<div class="text-right">
-						<a type="button" class="btn btn-info" href="/detail.html">Voir le projet</a>
-					</div>
-				</div>
-			</div>
-			<div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);">
-				<a href="/detail.html"><img class="card-img-top" src="img/projet/mimi-thian-737711-unsplash.jpg"
-						alt="Card image cap"></a>
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<h6 class="card-title">Card sub-title</h6>
-					<p class="card-text text-justify">This is a longer card with supporting text below as a natural
-						lead-in to additional content. This content is a little bit longer.</p>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<hr>
-					<div class="text-right">
-						<a type="button" class="btn btn-info" href="/detail.html">Voir le projet</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<br>
-
-		<div class="card-deck">
-			<div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);">
-				<a href="/detail.html"><img class="card-img-top" src="img/projet/simon-abrams-286276-unsplash.jpg"
-						alt="Card image cap"></a>
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<h6 class="card-title">Card sub-title</h6>
-					<p class="card-text text-justify">This is a longer card with supporting text below as a natural
-						lead-in to additional content. This content is a little bit longer.</p>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<hr>
-					<div class="text-right">
-						<a type="button" class="btn btn-info" href="/detail.html">Voir le projet</a>
-					</div>
-				</div>
-			</div>
-			<div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);">
-				<a href="/detail.html"><img class="card-img-top" src="img/projet/trent-erwin-338084-unsplash.jpg"
-						alt="Card image cap"></a>
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<h6 class="card-title">Card sub-title</h6>
-					<p class="card-text text-justify">This is a longer card with supporting text below as a natural
-						lead-in to additional content. This content is a little bit longer.</p>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<hr>
-					<div class="text-right">
-						<a type="button" class="btn btn-info" href="/detail.html">Voir le projet</a>
-					</div>
-				</div>
-			</div>
-			<div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);">
-				<a href="/detail.html"><img class="card-img-top" src="img/projet/thomas-lefebvre-3950-unsplash.jpg"
-						alt="Card image cap"></a>
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<h6 class="card-title">Card sub-title</h6>
-					<p class="card-text text-justify">This is a longer card with supporting text below as a natural
-						lead-in to additional content. This content is a little bit longer.</p>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<span class="badge badge-info">New</span>
-					<hr>
-					<div class="text-right">
-						<a type="button" class="btn btn-info" href="/detail.html">Voir le projet</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<br>
-
-	</div>
-
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-		crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"
-		integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl"
-		crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+			integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+			crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"
+			integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl"
+			crossorigin="anonymous"></script>
 </body>
 
 </html>
@@ -274,3 +119,6 @@
 		</div>
 	</div>
 </div>
+=======
+</div>
+>>>>>>> aa64fbdce447120988bb9632f0d5ff33d8b13b9e
