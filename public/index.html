@@ -43,12 +43,31 @@
 			</button>
 		</nav>
 
+<<<<<<< HEAD
+					<!-- LISTES DES PROJETS -->
+					<div class="card-deck" ng-repeat="projets in listeprojets track by $index">
+					    <div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);" ng-repeat="projet in projets track by $index" ng-hide="{{projet.titre == undefined}}">
+                <a href="/detail.html"><img class="card-img-top" src="{{projet.image}}" alt="Card image cap" ></a>
+                <div class="card-body">
+                    <h5 class="card-title" class="titreprojet">{{projet.titre}}</h5>
+                    <h6 class="card-title" class="soustitreprojet">{{projet.soustitre}}</h6>
+                    <p class="card-text text-justify" class="descriptionprojet">{{projet.description}}</p>
+                    <span class="badge badge-secondary" ng-repeat="tag in projet.tags track by $index">{{tag.nom}}</span>
+                    <hr>
+                    <div class="text-right">
+                        <a type="button" class="btn btn-info" href="{{'/detail.html?id=' + projet.id}}">Voir le projet</a>
+                    </div>
+                </div>
+						</div>
+					</div>
+=======
 		<!-- JUMBOTRON -->
 		<br>
 		<div class="jumbotron shadow-lg p-3 mb-5 rounded" style="background-color: rgba(255, 255, 255, 0.1);">
 			<p class="lead" style="color: #9D9D9D;">Liquid'Up, premier réseau d'innovation collective, vous met en lien
 				pour trouver idées, collaborateurs, compétences pour l'aboutissement d'un projet.</p>
 		</div>
+>>>>>>> 4cf059bfed67c8d9dc3140a178aba89eaee486dc
 
 		<!-- LISTES DES PROJETS -->
 		<div class="card-deck" ng-repeat="projets in listeprojets track by $index">
@@ -69,10 +88,17 @@
 			</div>
 		</div>
 
+<<<<<<< HEAD
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="index.js"></script>
+=======
 		<br>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="index.js"></script>
+>>>>>>> 4cf059bfed67c8d9dc3140a178aba89eaee486dc
 
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"
 			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

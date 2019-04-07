@@ -50,21 +50,12 @@ function login() {
     });
 }
 
-var app = angular.module('myApp', []);
-  app.controller('myCtrl', function($scope, $http) {
+var app = angular.module('myApp', ['ngRoute']);
+  app.controller('myCtrl', function($scope,$http,$routeParams, $location) {
     $scope.listeprojets = {};
+    $scope.projet = {};
 
     $scope.oninit = function () {
-      /*$scope.projets = [{
-        'description': "Faites vos rencontre professionnelle à distance via vos casque VR pour conserver un maximum de contact humain sans bouger de votre bureau",
-        'image': "/img/projet/nordwood-themes-166423-unsplash.jpg",
-        'soustitre': "application de consultation de professionnel par réalité virtuelle",
-        'tags': [
-          {nom: "Test1", actif: true, projet: Array(1)},
-          {nom: "Test2", actif: true, projet: Array(1)}
-        ],
-        'titre': "VR consulting"
-      }];*/
       $http.get('http://localhost:1337/projets')
         .then(function(response) {
           $scope.listeprojets = [];
@@ -73,8 +64,17 @@ var app = angular.module('myApp', []);
           $scope.listeprojets.push([response.data[6], response.data[7], response.data[8]]);
         });
     };
+    $scope.initProjet = function () {
+      var id = new URL(window.location.href).searchParams.get('id');
+      console.log(id);
+      $http.get('http://localhost:1337/projets/' + id)
+        .then(function(response) {
+          console.log(response.data);
+          $scope.projet = response.data;
+        });
+    };
     var token = getCookie("token");
-  axios
+  /*axios
     .get('http://localhost:1337/projets', {
       headers: {
         Authorization: `Bearer ${token}`
@@ -83,10 +83,10 @@ var app = angular.module('myApp', []);
     .then(response => {
       console.log(response.data);
       $scope.projets = response.data
-    });
+    });*/
 });
 
-function getprojet() {
+/*function getprojet() {
   var token = getCookie("token");
   axios
     .get('http://localhost:1337/projets', {
@@ -98,7 +98,7 @@ function getprojet() {
       console.log(response.data);
 
     });
-}
+}*/
 
 function verifConnexion() {
   if (getCookie("token") != "") {
@@ -107,7 +107,7 @@ function verifConnexion() {
     x = document.getElementById("connexion");
     x.style.display = "none";
   }
-  getprojet();
+  //getprojet();
 }
 
 function getressources(ressourcesURL){
