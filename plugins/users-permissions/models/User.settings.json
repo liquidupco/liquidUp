@@ -37,7 +37,7 @@
       "type": "boolean",
       "default": false,
       "configurable": false
-    }, 
+    },
     "blocked": {
       "type": "boolean",
       "default": false,
@@ -48,6 +48,23 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
+    },
+    "nom": {
+      "default": "",
+      "type": "string"
+    },
+    "prenom": {
+      "default": "",
+      "type": "string"
+    },
+    "description": {
+      "default": "",
+      "type": "string"
+    },
+    "majeur": {
+      "default": false,
+      "type": "boolean"
     }
-  }
+  },
+  "collectionName": "users-permissions_user"
 }

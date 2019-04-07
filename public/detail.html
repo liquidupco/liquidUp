@@ -1,316 +1,190 @@
 <!doctype html>
 
 <html>
-<<<<<<< HEAD
-  <head>
-    <meta charset="utf-8" />
-    <title>Détails du projet - Liquid'Up</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
-   </head>
-  		
-  	<body ng-app="myApp" ng-controller="myCtrl" ng-init="initProjet()" onload="verifConnexion()" lang="en" style="background-color: #292E33;">
-  		<div class="w-75 mx-auto">
-
-					<!-- NAVBAR -->
-					<nav class="navbar navbar-expand-lg">					
-							<a class="navbar-brand text-light" href="/">
-								<img src="img/liquidUpBanniere.png" width="175"  class="d-inline-block align-top" alt="">
-							</a>	
-							<div class="collapse navbar-collapse" id="navbarNav">
-									<ul class="navbar-nav">
-										<!--
-=======
 
 <head>
-	<meta charset="utf-8" />
-	<title>Détails du projet - Liquid'Up</title>
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta charset="utf-8" />
+  <title>Détails du projet - Liquid'Up</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
 
-<body lang="en" style="background-color: #292E33;" onload="verifConnexion()">
-	<div class="w-75 mx-auto">
+<body ng-init="initProjet()" ng-app="myApp" ng-controller="myCtrl" lang="en" style="background-color: #292E33;" onload="verifConnexion()">
+<div class="w-75 mx-auto">
 
-		<!-- NAVBAR -->
-		<nav class="navbar navbar-expand-lg">
-			<a class="navbar-brand text-light" href="/">
-				<img src="img/liquidUpBanniere.png" width="175" class="d-inline-block align-top" alt="">
-			</a>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
-					<!--
->>>>>>> 4cf059bfed67c8d9dc3140a178aba89eaee486dc
-										<li class="nav-item">
-											<a class="nav-link text-light" href="/listProjet.html">Project</a>
-										</li>
-										
-											<li class="nav-item">
-												<a class="nav-link text-light" href="#">Pricing</a>
-											</li>
-											<li class="nav-item">
-												<a class="nav-link disabled text-light" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-											</li>
-										-->
-				</ul>
-			</div>
-			<a href="/dashboard.html">
-				<img id="avatar" src="img/avatar/icon_animal_camelo.svg" style="display: none;width: 32px;height: 32px;">
-			</a>
-			<button id="connexion" type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
-				Se connecter
-			</button>
-		</nav>
-		<br>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand text-light" href="/">
+      <img src="img/liquidUpBanniere.png" width="175" class="d-inline-block align-top" alt="">
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!--
+                                      <li class="nav-item">
+                                          <a class="nav-link text-light" href="/listProjet.html">Project</a>
+                                      </li>
 
-		<!-- CONTENT -->
-		<div class="row">
-			<div class="col">
-				<div class="row">
+                                          <li class="nav-item">
+                                              <a class="nav-link text-light" href="#">Pricing</a>
+                                          </li>
+                                          <li class="nav-item">
+                                              <a class="nav-link disabled text-light" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                          </li>
+                                      -->
+      </ul>
+    </div>
+    <a href="/dashboard.html">
+      <img id="avatar" src="img/avatar/icon_animal_camelo.svg" style="display: none;width: 32px;height: 32px;">
+    </a>
+    <button id="connexion" type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+      Se connecter
+    </button>
+  </nav>
+  <br>
 
-					<!-- Bloc contenue du projet (Titre, description, etc...) -->
-					<div class="col">
-						<div class="text-light" style="background-color: transparent;">
-							<div class="d-flex justify-content-between align-items-center w-100">
-								<h1 class="text-light">Titre du projet</h1>
-								<div class="">
-									<span class="badge badge-success">Santé</span>
-									<span class="badge badge-dark">Agroalimentaire</span>
-									<span class="badge badge-warning">Logistique</span>
-									<span class="badge badge-light">Banque</span>
-								</div>
-<<<<<<< HEAD
-								<a href="/dashboard.html" >
-									<img id="avatar" src="img/avatar/icon_animal_camelo.svg" style="display: none;width: 32px;height: 32px;">
-								</a>
-								<button id="connexion" type="button" class="btn btn-info" data-toggle="modal"  data-target="#exampleModal">
-										Se connecter
-								</button>
-					</nav>
-
-			<div class="row">
-				<div class="col">
-					<div class="row">
-	 					<div class="col-5">
-							<div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);">
-								<img class="card-img-top" src="{{projet.image}}" alt="Card image cap">
-								<div class="card-body">
-									<h5 class="pb-2 mb-0 text-light">Initiateur</h5>  
-									<div class="media text-muted pt-3">
-					                  <img alt="32x32" class="mr-2 rounded" src="img/avatar/icon_animal_ave.svg" data-holder-rendered="true" style="width: 32px; height: 32px;">
-					                  <div class="media-body pb-3 mb-0 small lh-125">
-					                    <div class="d-flex justify-content-between align-items-center w-100">
-																	<a href="/profil.html"><h6 class="text-light">Théo</h6></a>
-					                		<!-- <p class="text-right text-light">4723 Points</p> -->
-					                    </div>
-					                    <span class="d-block text-gray-dark">Actif sur 3 projets.</span>
-					                  </div>
-					                </div>
-								    
-					                <div class="progress">
-					                  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
-					                </div>
-
-					                <br>
-
-					                <h5 class="pb-2 mb-0 text-light">Contributeurs</h5>  
-
-					                <div class="list-group">
-					                	<div class="media text-muted pt-3">
-						                	<img alt="32x32" class="mr-2 rounded" src="img/avatar/icon_animal_cow.svg" data-holder-rendered="true" style="width: 32px; height: 32px;">
-							                  <div class="media-body pb-3 mb-0 small lh-125">
-							                    <div class="d-flex justify-content-between align-items-center w-100">
-							                      	<a href="/profil.html"><h6 class="text-light">George</h6></a>
-							                		<!-- <p class="text-right text-light">4723 Points</p> -->
-							                    </div>
-							                  </div>
-					                	</div>
-					                	 <div class="media text-muted pt-3">
-						                    <img alt="32x32" class="mr-2 rounded" src="img/avatar/icon_animal_bull.svg" data-holder-rendered="true" style="width: 32px; height: 32px;">
-						                    <div class="media-body pb-3 mb-0 small lh-125">
-							                    <div class="d-flex justify-content-between align-items-center w-100">
-							                      <a href="/profil.html"><h6 class="text-light">Arnaud</h6></a>
-							                		<!-- <p class="text-right text-light">4723 Points</p> -->
-							                    </div>
-							                </div>
-						                </div>
-					                </div>
-
-					               
-
-								</div>								
-=======
-							</div>
-							<br>
-							<p class="text-justify">Description du projet !</p>
-							<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-								laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-								velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-								in culpa qui officia deserunt mollit anim id est laborum.</p>
-							<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-								laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-								velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-								in culpa qui officia deserunt mollit anim id est laborum.</p>
-							<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-								laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-								velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-								in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-							<br>
-							<br>
-							<br>
-
-							<div class="d-flex justify-content-around w-100">
-								<button type="button" class="btn btn-info">Contribuer</button>
-								<button type="button" class="btn btn-info">Contactez l'initiateur</button>
->>>>>>> 4cf059bfed67c8d9dc3140a178aba89eaee486dc
-							</div>
-						</div>
-					</div>
-
-<<<<<<< HEAD
-						<div class="col">
-				            <div class="text-light" style="background-color: transparent;">
-				            	<div class="d-flex justify-content-between align-items-center w-100">
-									<h1 class="text-light">{{projet.titre}}</h1>
-									<div class="">
-                    <span class="badge badge-secondary" ng-repeat="tag in projet.tags track by $index">{{tag.nom}}</span>
-=======
-					<!-- Équipe du projet -->
-					<div class="col-5">
-						<div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);">
-							<img class="card-img-top" src="img/projet/jeff-sheldon-3220-unsplash.jpg" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="pb-2 mb-0 text-light">Initiateur du projet</h5>
-								<div class="media text-muted pt-3">
-									<img alt="32x32" class="mr-2 rounded" src="img/avatar/icon_animal_ave.svg" data-holder-rendered="true"
-										style="width: 32px; height: 32px;">
-									<div class="media-body pb-3 mb-0 small lh-125">
-										<div class="d-flex justify-content-between align-items-center w-100">
-											<a href="/profil.html">
-												<h6 class="text-light">Patrick</h6>
-											</a>
-											<span class="d-block text-gray-dark">Actif sur 3 projets.</span>
-										</div>
->>>>>>> 4cf059bfed67c8d9dc3140a178aba89eaee486dc
-									</div>
-
-<<<<<<< HEAD
-								<p class="text-justify">{{projet.soustitre}}</p>
-								<p class="text-justify">{{projet.description}}</p>
-=======
-								</div>
-								<span class="text-secondary">Avancement du projet</span>
-								<div class="progress">
-									<div class="progress-bar bg-info" role="progressbar" aria-valuenow="0" aria-valuemin="0"
-										aria-valuemax="100" style="width: 25%;"></div>
-								</div>
-
->>>>>>> 4cf059bfed67c8d9dc3140a178aba89eaee486dc
-								<br>
-
-								<h5 class="pb-2 mb-0 text-light">Contributeurs</h5>
-
-								<div class="list-group">
-									<div class="media text-muted pt-3">
-										<img alt="32x32" class="mr-2 rounded" src="img/avatar/iconfinder_icon_animal_leao_3316544.svg"
-											data-holder-rendered="true" style="width: 32px; height: 32px;">
-										<div class="media-body pb-3 mb-0 small lh-125">
-											<div class="d-flex justify-content-between align-items-center w-100">
-												<a href="/profil.html">
-													<h6 class="text-light">Marjolaine</h6>
-												</a>
-												<span class="d-block text-gray-dark">Actif sur 1 projets.</span>
-											</div>
-										</div>
-									</div>
-									<div class="media text-muted pt-3">
-										<img alt="32x32" class="mr-2 rounded" src="img/avatar/icon_animal_cow.svg"
-											data-holder-rendered="true" style="width: 32px; height: 32px;">
-										<div class="media-body pb-3 mb-0 small lh-125">
-											<div class="d-flex justify-content-between align-items-center w-100">
-												<a href="/profil.html">
-													<h6 class="text-light">Arnaud</h6>
-												</a>
-												<span class="d-block text-gray-dark">Actif sur 4 projets.</span>
-											</div>
-										</div>
-									</div>
-								</div>
+  <!-- CONTENT -->
+  <div class="row">
+    <div class="col">
+      <div class="row">
 
 
 
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <!-- Équipe du projet -->
+        <div class="col-5">
+          <div class="card text-light" style="background-color: rgba(255, 255, 255, 0.1);">
+            <img class="card-img-top" src="{{projet.image}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="pb-2 mb-0 text-light">Initiateur du projet</h5>
+              <div class="media text-muted pt-3">
+                <img alt="32x32" class="mr-2 rounded" src="img/avatar/icon_animal_ave.svg" data-holder-rendered="true"
+                     style="width: 32px; height: 32px;">
+                <div class="media-body pb-3 mb-0 small lh-125">
+                  <div class="d-flex justify-content-between align-items-center w-100">
+                    <a href="/profil.html">
+                      <h6 class="text-light">Patrick</h6>
+                    </a>
+                    <span class="d-block text-gray-dark">Actif sur 3 projets.</span>
+                  </div>
+                </div>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-		crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"
-		integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl"
-		crossorigin="anonymous"></script>
+              </div>
+              <span class="text-secondary">Avancement du projet</span>
+              <div class="progress">
+                <div class="progress-bar bg-info" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                     aria-valuemax="100" style="width: 25%;"></div>
+              </div>
+
+              <br>
+
+              <h5 class="pb-2 mb-0 text-light">Contributeurs</h5>
+
+              <div class="list-group">
+                <div class="media text-muted pt-3">
+                  <img alt="32x32" class="mr-2 rounded" src="img/avatar/iconfinder_icon_animal_leao_3316544.svg"
+                       data-holder-rendered="true" style="width: 32px; height: 32px;">
+                  <div class="media-body pb-3 mb-0 small lh-125">
+                    <div class="d-flex justify-content-between align-items-center w-100">
+                      <a href="/profil.html">
+                        <h6 class="text-light">Marjolaine</h6>
+                      </a>
+                      <span class="d-block text-gray-dark">Actif sur 1 projets.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="media text-muted pt-3">
+                  <img alt="32x32" class="mr-2 rounded" src="img/avatar/icon_animal_cow.svg"
+                       data-holder-rendered="true" style="width: 32px; height: 32px;">
+                  <div class="media-body pb-3 mb-0 small lh-125">
+                    <div class="d-flex justify-content-between align-items-center w-100">
+                      <a href="/profil.html">
+                        <h6 class="text-light">Arnaud</h6>
+                      </a>
+                      <span class="d-block text-gray-dark">Actif sur 4 projets.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+        <!-- Bloc contenue du projet (Titre, description, etc...) -->
+        <div class="col">
+          <div class="text-light" style="background-color: transparent;">
+            <div class="d-flex justify-content-between align-items-center w-100">
+              <h1 class="text-light">{{projet.titre}}</h1>
+              <div class="">
+                <span class="badge badge-secondary" ng-repeat="tag in projet.tags track by $index">{{tag.nom}}</span>
+              </div>
+            </div>
+            <br>
+            <p class="text-justify">{{projet.soustitre}}</p>
+            <p class="text-justify">{{projet.description}}</p>
+            <br>
+            <br>
+            <br>
+
+            <div class="d-flex justify-content-around w-100">
+              <button type="button" class="btn btn-info">Contribuer</button>
+              <button type="button" class="btn btn-info">Contactez l'initiateur</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="index.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"
+        integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl"
+        crossorigin="anonymous"></script>
 </body>
 
-<<<<<<< HEAD
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-      <script src="index.js"></script>
-
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
-	</body>
-=======
->>>>>>> 4cf059bfed67c8d9dc3140a178aba89eaee486dc
 </html>
 
 <!-- MODAL -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-	aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel">Se connecter</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body">
-				<form name="login" action="javascript:login()">
-					<div class="form-group">
-						<label for="exampleInputEmail1">Pseudo</label>
-						<input type="text" name="username" class="form-control" id="log_mail" aria-describedby="emailHelp"
-							placeholder="Pseudo">
-					</div>
-					<div class="form-group">
-						<label for="exampleInputPassword1">Mot de passe</label>
-						<input name="password" type="password" class="form-control" id="exampleInputPassword1"
-							placeholder="Mot de passe...">
-					</div>
-					<button type="submit" class="btn btn-info btn-sm">Se connecter</button>
-				</form>
-			</div>
-			<div class="modal-footer">
-				<a class="btn btn-info" href="/inscription.html" role="button">S'inscrire</a>
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			</div>
-		</div>
-<<<<<<< HEAD
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Se connecter</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form name="login" action="javascript:login()">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Pseudo</label>
+            <input type="text" name="username" class="form-control" id="log_mail" aria-describedby="emailHelp"
+                   placeholder="Pseudo">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Mot de passe</label>
+            <input name="password" type="password" class="form-control" id="exampleInputPassword1"
+                   placeholder="Mot de passe...">
+          </div>
+          <button type="submit" class="btn btn-info btn-sm">Se connecter</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-info" href="/inscription.html" role="button">S'inscrire</a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
-=======
-	</div>
-</div>
->>>>>>> 4cf059bfed67c8d9dc3140a178aba89eaee486dc

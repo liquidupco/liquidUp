@@ -12,7 +12,8 @@ function register() {
       console.log('User token', response.data.jwt);
       setCookie("username", response.data.user, 1);
       setCookie("token", response.data.jwt, 1);
-      alert('Compte connecté, user token:' + response.data.jwt);
+      //alert('Compte connecté, user token:' + response.data.jwt);
+      window.location.replace("http://localhost:1337/");
     })
     .catch(error => {
       // Handle error.
@@ -31,9 +32,10 @@ function login() {
     })
     .then(response => {
       // Handle success.
-      console.log('Well done!');
+      console.log(response.data);
       console.log('User profile', response.data.user);
       console.log('User token', response.data.jwt);
+      setCookie("user", response.data.user);
       setCookie("username", response.data.user, 1);
       setCookie("token", response.data.jwt, 1);
       var x = document.getElementById("avatar");
@@ -51,9 +53,10 @@ function login() {
 }
 
 var app = angular.module('myApp', ['ngRoute']);
-  app.controller('myCtrl', function($scope,$http,$routeParams, $location) {
+  app.controller('myCtrl', function($scope,$http) {
     $scope.listeprojets = {};
     $scope.projet = {};
+    $scope.user = {};
 
     $scope.oninit = function () {
       $http.get('http://localhost:1337/projets')
@@ -72,6 +75,10 @@ var app = angular.module('myApp', ['ngRoute']);
           console.log(response.data);
           $scope.projet = response.data;
         });
+    };
+    $scope.initUser = function () {
+      $scope.user = getCookie("user");
+      console.log($scope.user);
     };
     var token = getCookie("token");
   /*axios
