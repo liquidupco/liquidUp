@@ -42,6 +42,8 @@ function login() {
       x.style.display = "block";
       x = document.getElementById("connexion");
       x.style.display = "none";
+      x = document.getElementById("projet");
+      x.style.display = "block";
       $("#exampleModal").modal('hide');
       //alert('Compte connecté, user token:' + response.data.jwt);
     })
@@ -92,20 +94,23 @@ var app = angular.module('myApp', ['ngRoute']);
       $scope.projets = response.data
     });*/
 });
+  function addProjet() {
+    var token = getCookie("token");
+    axios
+      .post('http://localhost:1337/projets', {
+        headers: {
+          Authorization: `Bearer ${token}`
+        },
+        titre: document.forms["projet"]["nomProjet"].value,
+        description: document.forms["projet"]["descriptionProjet"].value,
+        image: "/img/projet/thought-catalog-214785-unsplash.jpg"
+      })
+      .then(response => {
+        console.log(response.data);
+        document.location.href=("http://localhost:1337/detail.html?id=" + response.data.id);
 
-/*function getprojet() {
-  var token = getCookie("token");
-  axios
-    .get('http://localhost:1337/projets', {
-      headers: {
-        Authorization: `Bearer ${token}`
-      }
-    })
-    .then(response => {
-      console.log(response.data);
-
-    });
-}*/
+      });
+  }
 
 function verifConnexion() {
   if (getCookie("token") != "") {
@@ -113,6 +118,8 @@ function verifConnexion() {
     x.style.display = "block";
     x = document.getElementById("connexion");
     x.style.display = "none";
+    x = document.getElementById("projet");
+    x.style.display = "block";
   }
   //getprojet();
 }

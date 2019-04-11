@@ -8,7 +8,7 @@
 
 </head>
 
-<body lang="en" style="background-color: #292E33;" onload="verifConnexion()">
+<body ng-init="checkConnection()" ng-app="myApp" ng-controller="myCtrl" lang="en" style="background-color: #292E33;" onload="verifConnexion()">
 	<div class="w-75 mx-auto">
 
 		<!-- NAVBAR -->
@@ -32,12 +32,13 @@
 								-->
 				</ul>
 			</div>
-			<a href="/dashboard.html">
-				<img id="avatar" src="img/avatar/icon_animal_camelo.svg" style="display: none;width: 32px;height: 32px;">
-			</a>
-			<button id="connexion" type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
-				Se connecter
-			</button>
+      <a href="/dashboard.html">
+        <img id="avatar" src="img/avatar/icon_animal_camelo.svg"
+             style="display: none;width: 32px;height: 32px;">
+      </a>
+      <button id="connexion" type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+        Se connecter
+      </button>
 		</nav>
 
 		<div class="container text-white">
@@ -45,15 +46,15 @@
 			<h1>Formulaire de création d'un projet</h1>
 			<br>
 
-			<form name="registration" action="javascript:register()">
+			<form name="projet" action="javascript:addProjet()">
 				<div class="form-group">
 					<label for="exampleInputEmail1">Nom du projet</label>
-					<input type="text" name="username" class="form-control" id="log_mail" aria-describedby="emailHelp"
+					<input type="text" name="nomProjet" class="form-control" id="log_mail" aria-describedby="emailHelp"
 						placeholder="Nom du projet...">
 				</div>
 				<div class="form-group">
 						<label for="exampleFormControlTextarea1">Description du projet</label>
-						<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Description du projet..."></textarea>
+						<textarea name="descriptionProjet" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Description du projet..."></textarea>
 					</div>
 				
 				<button type="submit" class="btn btn-secondary btn-sm" style="background-color: #191919">Submit</button>
@@ -61,8 +62,11 @@
 		</div>
 	</div>
 
-	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-	<script src="index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="index.js"></script>
+
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
